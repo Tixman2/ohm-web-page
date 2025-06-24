@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calcul Tension Interactive & Animée</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <main class="container" role="main" aria-label="Calculateur de tension électrique">
+    <h1>Calcul de la Tension électrique ⚡</h1>
+
+    <form id="tensionForm" autocomplete="off" novalidate>
+      <div class="inputGroup">
+        <input type="number" id="resistance" name="resistance" placeholder=" " step="any" required aria-required="true" />
+        <label for="resistance">Résistance (Ω)</label>
+      </div>
+      <div class="inputGroup">
+        <input type="number" id="intensite" name="intensite" placeholder=" " step="any" required aria-required="true" />
+        <label for="intensite">Intensité (A)</label>
+      </div>
+      <button type="submit" class="btn">Calculer</button>
+    </form>
+
+    <div id="result" role="alert" aria-live="polite"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
